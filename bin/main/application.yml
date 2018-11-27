@@ -1,0 +1,10 @@
+#mongodb properties
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: otp
+
+server:
+  port: 3040

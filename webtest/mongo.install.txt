@@ -1,0 +1,16 @@
+How to Install MongoDB on a Mac OS
+
+1. https://www.mongodb.com/dr/fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.4.tgz/download
+
+2. Navigate to the download folder
+
+3. Extract the archive with the command : tar -zxvf mongodb-osx-ssl-x86_64-4.0.4.tgz
+
+4. Open your .bash_profile and enter the command : export PATH=<mongodb-install-directory>/bin:$PATH
+
+5. Create a Data Directory : mkdir -p /data/db
+
+6. Open a new Terminal and enter : mongod
+
+7. Mongo GUI Client : https://studio3t.com/download-now/
+

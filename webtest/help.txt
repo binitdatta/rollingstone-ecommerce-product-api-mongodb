@@ -1,0 +1,230 @@
+##1. How to Create a Product 
+
+Rest Client URL : http://localhost:3040/product
+Method : POST
+Body:
+
+{
+  "productId": "1001",
+  "productCode": "1001",
+  "productName": "Men's Dress Shirt",
+  "shortDescription": "Men's White Dress Shirt",
+  "longDescription": "Men's White Dress Shirt with Tie",
+  "canDisplay": "true",
+  "isDeleted": "false",
+  "isAutomotive": "false",
+  "isInternational": "false",
+  "category": {
+    "id": 2,
+    "categoryName": "Men's Dress",
+    "categoryDescription": "Dress"
+  },
+  "parentCategory": {
+    "id": 1,
+    "categoryName": "Clothing",
+    "categoryDescription": "Clothing"
+  }
+}
+
+Rest Client URL : http://localhost:3040/product
+Method : POST
+Body:
+
+{
+  "productId": "1001",
+  "productCode": "1001",
+  "productName": "Men's Dress Shirt",
+  "shortDescription": "Men's Blue Dress Shirt",
+  "longDescription": "Men's Blue Dress Shirt with Tie",
+  "canDisplay": "true",
+  "isDeleted": "false",
+  "isAutomotive": "false",
+  "isInternational": "false",
+  "category": {
+    "id": 2,
+    "categoryName": "Men's Dress",
+    "categoryDescription": "Dress"
+  },
+  "parentCategory": {
+    "id": 1,
+    "categoryName": "Clothing",
+    "categoryDescription": "Clothing"
+  }
+}
+
+##2. How to retrieve all products
+
+Rest Client URL : http://localhost:3040/product
+Method : GET
+
+[  
+   {  
+      "id":"5bfd8c6655db140bdc1cb954",
+      "productId":"1001",
+      "productCode":"1001",
+      "productName":"Men's Dress Shirt",
+      "shortDescription":"Men's White Dress Shirt",
+      "longDescription":"Men's White Dress Shirt with Tie",
+      "canDisplay":true,
+      "category":{  
+         "id":2,
+         "categoryName":"Men's Dress",
+         "categoryDescription":"Dress"
+      },
+      "parentCategory":{  
+         "id":1,
+         "categoryName":"Clothing",
+         "categoryDescription":"Clothing"
+      },
+      "deleted":false,
+      "automotive":false,
+      "international":false
+   },
+   {  
+      "id":"5bfd8d1155db140bdc1cb955",
+      "productId":"1002",
+      "productCode":"1002",
+      "productName":"Men's Dress Shirt",
+      "shortDescription":"Men's Blue Dress Shirt",
+      "longDescription":"Men's Blue Dress Shirt with Tie",
+      "canDisplay":true,
+      "category":{  
+         "id":2,
+         "categoryName":"Men's Dress",
+         "categoryDescription":"Dress"
+      },
+      "parentCategory":{  
+         "id":1,
+         "categoryName":"Clothing",
+         "categoryDescription":"Clothing"
+      },
+      "deleted":false,
+      "automotive":false,
+      "international":false
+   }
+]
+
+##3. How to get a single product 
+
+Rest Client URL : http://localhost:3040/product
+Method : GET
+
+
+{  
+   "id":"5bfd8c6655db140bdc1cb954",
+   "productId":"1001",
+   "productCode":"1001",
+   "productName":"Men's Dress Shirt",
+   "shortDescription":"Men's White Dress Shirt",
+   "longDescription":"Men's White Dress Shirt with Tie",
+   "canDisplay":true,
+   "category":{  
+      "id":2,
+      "categoryName":"Men's Dress",
+      "categoryDescription":"Dress"
+   },
+   "parentCategory":{  
+      "id":1,
+      "categoryName":"Clothing",
+      "categoryDescription":"Clothing"
+   },
+   "deleted":false,
+   "automotive":false,
+   "international":false
+}
+
+##4. How to update a product
+
+Rest Client URL : http://localhost:3040/product/1001
+
+Body
+
+{  
+   "id":"5bfd8c6655db140bdc1cb954",
+   "productId":"1001",
+   "productCode":"1001",
+   "productName":"Men's Dress Shirt",
+   "shortDescription":"Men's Yellow Dress Shirt",
+   "longDescription":"Men's Yellow Dress Shirt with Tie",
+   "canDisplay":true,
+   "category":{  
+      "id":2,
+      "categoryName":"Men's Dress",
+      "categoryDescription":"Dress"
+   },
+   "parentCategory":{  
+      "id":1,
+      "categoryName":"Clothing",
+      "categoryDescription":"Clothing"
+   },
+   "deleted":false,
+   "automotive":false,
+   "international":false
+}
+
+##5. How to veryfy the update
+
+
+Rest Client URL : http://localhost:3040/product
+Method : GET
+
+
+{  
+   "id":"5bfd8c6655db140bdc1cb954",
+   "productId":"1001",
+   "productCode":"1001",
+   "productName":"Men's Dress Shirt",
+   "shortDescription":"Men's Yellow Dress Shirt",
+   "longDescription":"Men's Yellow Dress Shirt with Tie",
+   "canDisplay":true,
+   "category":{  
+      "id":2,
+      "categoryName":"Men's Dress",
+      "categoryDescription":"Dress"
+   },
+   "parentCategory":{  
+      "id":1,
+      "categoryName":"Clothing",
+      "categoryDescription":"Clothing"
+   },
+   "deleted":false,
+   "automotive":false,
+   "international":false
+}
+
+##6. How to delete a single product
+
+http://localhost:3040/product/1002
+
+Method : DELETE
+
+##7. How to veryifythe delete
+
+Rest Client URL : http://localhost:3040/product
+Method : GET
+
+[  
+   {  
+      "id":"5bfd8c6655db140bdc1cb954",
+      "productId":"1001",
+      "productCode":"1001",
+      "productName":"Men's Dress Shirt",
+      "shortDescription":"Men's Yellow Dress Shirt",
+      "longDescription":"Men's Yellow Dress Shirt with Tie",
+      "canDisplay":true,
+      "category":{  
+         "id":2,
+         "categoryName":"Men's Dress",
+         "categoryDescription":"Dress"
+      },
+      "parentCategory":{  
+         "id":1,
+         "categoryName":"Clothing",
+         "categoryDescription":"Clothing"
+      },
+      "deleted":false,
+      "automotive":false,
+      "international":false
+   }
+]
+
